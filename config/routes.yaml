@@ -1,3 +1,11 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+chat_collection_get:
+    path: /api/chat
+    methods: GET
+    controller: App\UserInterface\Controller\ChatController
+chat_collection_post:
+    path: /api/chat
+    methods: POST
+    controller: App\UserInterface\Controller\SendController

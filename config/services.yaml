@@ -20,11 +20,13 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
             - '../src/Tests/'
+    YTeissier\Project\Domain\:
+        resource: '../domain/src/*'
 
     # controllers are imported separately to make sure services can be injected
     # as action arguments even if you don't extend any base controller class
-    App\Controller\:
-        resource: '../src/Controller/'
+    App\UserInterface\Controller\:
+        resource: '../src/UserInterface/Controller/'
         tags: ['controller.service_arguments']
 
     # add more service definitions when explicit configuration is needed
